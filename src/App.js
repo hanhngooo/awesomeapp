@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "./components/Title";
 import Pokemon from "./components/Pokemon";
+import Likecounter from "./components/Likecounter";
 import "./style/global.scss";
 
 const all_pokemon = [
@@ -48,6 +49,7 @@ function App() {
               terrifying={pokemon.terrifying}
               abilities={pokemon.abilities}
             />
+            <Likecounter />
           </div>
         ))}
       </div>
