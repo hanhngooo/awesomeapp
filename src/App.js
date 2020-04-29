@@ -3,6 +3,7 @@ import Title from "./components/Title";
 import Pokemon from "./components/Pokemon";
 import Likecounter from "./components/Likecounter";
 import LikeButton from "./components/LikeButton";
+import AwesomeAnimals from "./components/AwesomeAnimals";
 import "./style/global.scss";
 
 const all_pokemon = [
@@ -35,12 +36,12 @@ const all_pokemon = [
     abilities: ["Intimidate", "Unnerve"],
   },
 ];
-
 function App() {
   return (
     <main className="container">
       <Title content="Some Simple Title" />
       <div className="row">
+        <AwesomeAnimals />
         {all_pokemon.map((pokemon) => (
           <div className="col-md-6 col-lg-4">
             <Pokemon
