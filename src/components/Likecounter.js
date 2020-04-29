@@ -5,16 +5,22 @@ export default function LikeCounter() {
 
   const [numLike, set_numLike] = useState(innitialLike); // set a state for like
 
-  const incrementLike = () => {
-    console.log("what is this?", numLike);
-    set_numLike(numLike + 1);
+  const resetLike = () => {
+    set_numLike(innitialLike);
   };
 
   return (
     <div>
       <p>
         This post has <b>{numLike}</b> likes.
-        <button onClick={incrementLike}>Like</button>
+        <button
+          onClick={function () {
+            set_numLike(numLike + 1);
+          }}
+        >
+          Like
+        </button>
+        <button onClick={resetLike}>Reset</button>
       </p>
     </div>
   );
